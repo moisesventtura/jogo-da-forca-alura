@@ -13,19 +13,34 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/esquerda.css">
+    <!-- <link rel="stylesheet" href="css/responsivo.css"> -->
 </head>
 
 <body>
     <div class="container">
         <img class="logo-alura" src="img/logo-alura.svg" alt="Logotipo Alura">
-        <div class="tela-inicial">
+        <div class="tela-inicial" id="inicial">
             <div class="botoes">
                 <button class="start-game" id="iniciar">Começar a Jogar</button>
-                <button class="adicionar-palavra" id="add-word">Adicionar nova palavra</button>
+                <button class="adicionar-palavra" id="add-word" onclick="addWord()">Adicionar nova palavra</button>
+                <div class="esquerda d-none">
+                    <form>
+                        <textarea id="texto-principal" type="text" placeholder="Digite uma palavra ou frase"></textarea>
+                        <div>
+                            <div class="alerta">
+                                <img src="img/warning.svg">
+                                <span>Máx. 8 letras</span>
+                            </div>
+                            <div class="botoes-secundarios">
+                                <button class="bt-cripto" id="criptografar">Criptografar</button>
+                                <button class="bt-descripto" id="descriptografar">Descriptografar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div><!-- esquerda -->
             </div>
         </div>
-
     </div>
 
     <footer>
@@ -37,6 +52,9 @@
         </a>
         <p class="copyright">&copy; Desenvolvido por Moisés Ventura | 2022</p>
     </footer>
+
+
+    <script src="js/adicionar-palavra.js"></script>
 </body>
 
 </html>

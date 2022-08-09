@@ -1,0 +1,77 @@
+.d-none {
+    display: none;
+    pointer-events: none;
+}
+
+.esquerda {
+    width: 60%;
+    height: 100%;
+    padding-top: 40px;
+}
+
+/* form {
+    padding-top: 60px;
+    padding-left: 110px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100% - 148px);
+}
+
+form textarea {
+    width: 100%;
+    border: none;
+    font-family: "Inter";
+    outline: none;
+    color: var(--dark-blue-300);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    background-color: transparent;
+}
+
+form textarea::placeholder {
+    color: var(--dark-blue-300);
+}
+
+button {
+    width: 328px;
+    height: 67px;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: none;
+    border: 1px solid var(--dark-blue-300);
+    border-radius: 24px;
+    padding: 24px;
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 19px;
+    outline: none;
+}
+
+.alerta {
+    font-family: 'Inter';
+    font-size: 12px;
+    color: var(--gray-400);
+    opacity: 0.8;
+    margin: 0 0 16px 8px;
+}
+
+.alerta img {
+    margin-bottom: -4px;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+button.bt-cripto {
+    background-color: var(--dark-blue-300);
+    color: #FFFFFF;
+}
+
+button.bt-descripto {
+    background-color: #D8DFE8;
+    color: var(--dark-blue-300);
+} */
