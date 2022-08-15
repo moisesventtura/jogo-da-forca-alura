@@ -16,4 +16,10 @@ function addWord() {
         // document.querySelector(".tela-inicial").style.display = "none";
         // document.querySelector(".esquerda").style.display = "block";
     })
+
+    // function adicionaPalavra(palavra) {
+    //      bancoDePalavras  += "," + palavra;
+    //     return adicionaPalavra(palavra);
+
+    // }
 }

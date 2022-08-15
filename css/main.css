@@ -23,14 +23,20 @@ body {
     background-color: var(--light-blue-100);
 }
 
+header {
+    position: fixed;
+    top: 0;
+    padding: 48px 84px;
+    width: 100vw;
+}
+
 .container {
     height: 100vh;
     max-height: 100vh;
     display: flex;
     width: 100%;
     max-width: 1130px;
-    /* margin: 0 auto; */
-
+    margin: 0 auto;
 }
 
 .tela-inicial {
@@ -40,13 +46,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 24px;
-
 }
 
 .logo-alura {
     height: 48px;
-    margin: 40px 100px 0 84px;
+    margin: 40px;
 }
 
 .logo-alura:hover {
@@ -55,7 +61,8 @@ body {
 }
 
 .botoes {
-    margin-left: 430px;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -71,6 +78,7 @@ button {
     font-size: 16px;
     line-height: 19px;
     outline: none;
+    cursor: pointer;
 }
 
 button.start-game {
