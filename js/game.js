@@ -1,6 +1,3 @@
-let bancoDePalavras = ['FORCA', 'PALAVRA', 'JOGO'];
-let qtdErro = 0;
-
 //sorteia a palavra baseada no array de palavras
 function sortearPalavra(palavras) {
     const index = Math.floor(Math.random() * palavras.length)
@@ -9,11 +6,11 @@ function sortearPalavra(palavras) {
 }
 
 
+
 //checa um palpite
 function palpite(palavra, letra) {
     //letra não existe na palavra
     if (palavra.indexOf(letra) === -1) {
-        qtdErro++;
         return false;
     }
 
@@ -25,10 +22,50 @@ function palpite(palavra, letra) {
         index = ocorrencia + 1;
         ocorrencias.push(ocorrencia)
     }
-
     return ocorrencias;
 }
+
 //checa se o usuario excedeu a quantidade de palpites
 function checarEnforcado() {
-    return qtdErro > 10;
+    return qtdErro > 9;
+}
+
+
+let qtdErro = 0;
+const MAX_ERROS = 9;
+const letrasErradas = [];
+
+/**
+ * 
+ * @param {String} letraErrada
+ * @returns true caso o seja enforcado e false caso não seja enforcado
+ */
+
+function trataErros(letraErrada) {
+    qtdErro++;
+    letrasErradas.push(letraErrada);
+    if (qtdErro >= MAX_ERROS) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+let letrasCorretas = [];
+
+/**
+ * 
+ * @param {String} letraCorreta 
+ * @param {String} palavra 
+ */
+
+function trataAcerto(letraCorreta, palavra) {
+    letrasCorretas.push(letraCorreta)
+    const letrasUnicasNaPalavra = new Set(Array.from(palavra));
+    if (letrasUnicasNaPalavra.size === letrasCorretas.length) {
+        return true;
+    } else {
+        return false;
+    }
 }

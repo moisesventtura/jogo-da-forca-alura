@@ -13,7 +13,6 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/esquerda.css">
     <!-- <link rel="stylesheet" href="css/responsivo.css"> -->
 </head>
 
@@ -25,23 +24,33 @@
     <div class="container">
         <div class="tela-inicial" id="inicial">
             <div class="botoes">
-                <button class="start-game" id="iniciar">Começar a Jogar</button>
+                <div class="play">
+                    <button class="start-game" id="iniciar">Começar a Jogar</button>
+                    <div class="comecou">
+                    </div>
+                </div>
                 <button class="adicionar-palavra" id="add-word" onclick="addWord()">Adicionar nova palavra</button>
-                <!-- <div class="esquerda d-none">
-                    <form>
-                        <textarea id="texto-principal" type="text" placeholder="Digite uma palavra ou frase"></textarea>
-                        <div>
-                            <div class="alerta">
-                                <img src="img/warning.svg">
-                                <span>Máx. 8 letras</span>
-                            </div>
-                            <div class="botoes-secundarios">
-                                <button class="bt-cripto" id="criptografar">Criptografar</button>
-                                <button class="bt-descripto" id="descriptografar">Descriptografar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>esquerda -->
+            </div>
+        </div>
+        <div class="jogo d-none" id="game">
+            <div class="forca">
+
+            </div>
+            <div class="listas">
+                <ul class="lista-letras-certas">
+
+                </ul>
+                <ul class="lista-letras-erradas">
+
+                </ul>
+            </div>
+            <div class="botoes">
+                <div class="play">
+                    <button class="novo-jogo" id="new-game">Novo Jogo</button>
+                    <div class="comecou">
+                    </div>
+                </div>
+                <button class="desistir" id="quit" onclick="addWord()">Desistir</button>
             </div>
         </div>
     </div>
@@ -57,6 +66,8 @@
     </footer>
 
 
+    <script src="js/game.js"></script>
+    <script src="js/start-game.js"></script>
     <script src="js/adicionar-palavra.js"></script>
 </body>
 

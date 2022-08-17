@@ -17,9 +17,5 @@ function addWord() {
         // document.querySelector(".esquerda").style.display = "block";
     })
 
-    // function adicionaPalavra(palavra) {
-    //      bancoDePalavras  += "," + palavra;
-    //     return adicionaPalavra(palavra);
 
-    // }
 }
