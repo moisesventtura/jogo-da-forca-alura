@@ -13,50 +13,71 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adicionar-palavra.css">
+    <link rel="stylesheet" href="css/jogo.css">
     <!-- <link rel="stylesheet" href="css/responsivo.css"> -->
 </head>
 
 <header>
-    <img class="logo-alura" src="img/logo-alura.svg" alt="Logotipo Alura">
+    <a href="index.html">
+        <img class="logo-alura" src="img/logo-alura.svg" alt="Logotipo Alura">
+    </a>
 </header>
 
 <body>
     <div class="container">
         <div class="tela-inicial" id="inicial">
             <div class="botoes">
-                <div class="play">
-                    <button class="start-game" id="iniciar">Começar a Jogar</button>
-                    <div class="comecou">
+                <div class="btns">
+                    <div class="play">
+                        <button class="start-game" id="iniciar" onclick="startGame()">Começar a Jogar</button>
+                        <!-- <div class="comecou">
+                        </div> -->
                     </div>
+                    <button class="adicionar-palavra" id="add-word" onclick="adicionarPalavra()">Adicionar nova
+                        palavra</button>
                 </div>
-                <button class="adicionar-palavra" id="add-word" onclick="addWord()">Adicionar nova palavra</button>
             </div>
         </div>
         <div class="jogo d-none" id="game">
             <div class="forca">
-
             </div>
             <div class="listas">
-                <ul class="lista-letras-certas">
-
+                <ul class="letras-certas" id="corretas">
                 </ul>
-                <ul class="lista-letras-erradas">
-
+                <ul class="letras-erradas" id="incorretas">
                 </ul>
             </div>
             <div class="botoes">
                 <div class="play">
                     <button class="novo-jogo" id="new-game">Novo Jogo</button>
-                    <div class="comecou">
-                    </div>
+                    <!-- <div class=" comecou">
+                    </div> -->
                 </div>
-                <button class="desistir" id="quit" onclick="addWord()">Desistir</button>
+                <button class="desistir" id="quit">Desistir</button>
             </div>
+        </div>
+        <div class="adicionando-palavra d-none">
+            <form>
+                <textarea id="palavra-principal" type="text" placeholder="Digite uma palavra"></textarea>
+                <div class="alerta">
+                    <img src="img/warning.svg" alt="Alerta">
+                    <span>Máx. de 8 letras</span>
+                </div>
+                <div class="botoes">
+                    <div class="play">
+                        <button class="salvar-jogo" id="save">Salvar e começar</button>
+                        <!-- <div class=" comecou">
+                            </div> -->
+                    </div>
+                    <button class="cancelar" id="quit">Cancelar</button>
+                </div>
+            </form>
         </div>
     </div>
 
     <footer>
-        <a target="_blank" href="https://www.linkedin.com/in/moises-ventura">
+        <a target=" _blank" href="https://www.linkedin.com/in/moises-ventura">
             <img src="img/linkedin_logo.svg" class="logo-link" alt="linkedin">
         </a>
         <a target="_blank" href="https://github.com/moisesventtura">
@@ -65,10 +86,11 @@
         <p class="copyright">&copy; Desenvolvido por Moisés Ventura | 2022</p>
     </footer>
 
-
-    <script src="js/game.js"></script>
+    <script src="js/core-game.js"></script>
     <script src="js/start-game.js"></script>
     <script src="js/adicionar-palavra.js"></script>
+    <script src="js/logica-botoes.js"></script>
+
 </body>
 
 </html>

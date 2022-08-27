@@ -14,11 +14,8 @@ function startGame() {
         start();
     })
 }
-startGame();
 
-
-
-let bancoDePalavras = ['FORCA', 'PALAVRA', 'JOGO'];
+let bancoDePalavras = ['FORCA', 'PALAVRA', 'JOGO', 'ALURA', 'ORACLE'];
 
 
 function validaTecla(tecla) {
@@ -37,7 +34,7 @@ function start() {
 
     Array.from(palavra).forEach(function (letra) {
         const li = document.createElement("li");
-        document.querySelector(".lista-letras-certas").appendChild(li);
+        document.querySelector(".letras-certas").appendChild(li);
     })
 
     window.addEventListener('keyup', e => {
@@ -51,19 +48,20 @@ function start() {
                 // alert('Letra Errada PLAYBOY')
                 const li = document.createElement("li");
                 li.innerText = letra;
-                document.querySelector(".lista-letras-erradas").appendChild(li);
+                document.querySelector(".letras-erradas").appendChild(li);
+
 
                 if (enforcado) {
                     // alert('PERDEU PLAYBOY')
                 }
             } else {
                 const ganhou = trataAcerto(letra, palavra);
-                const itens = document.querySelectorAll(".lista-letras-certas li");
-                ocorrencias.forEach(function (ocorrencia) {
+                const itens = document.querySelectorAll(".letras-certas li");
+                ocorrencias.forEach(ocorrencia => {
                     itens[ocorrencia].innerText = letra;
                 })
                 if (ganhou) {
-                    alert('GANHOU RAPÁ');
+                    // alert('GANHOU RAPÁ');
                 } else {
                     // alert(`Acertou, mizeravi, indices: ${ocorrencias}`);
 

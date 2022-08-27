@@ -65,6 +65,7 @@ function trataAcerto(letraCorreta, palavra) {
     const letrasUnicasNaPalavra = new Set(Array.from(palavra));
     if (letrasUnicasNaPalavra.size === letrasCorretas.length) {
         return true;
+        alert('GANHOU RAPÁ');
     } else {
         return false;
     }
