@@ -1,14 +1,32 @@
 function adicionarPalavra() {
-    var btnAdicionarPalavra = document.querySelector(".adicionar-palavra");
+    const btnAdicionarPalavra = document.querySelector(".adicionar-palavra");
 
-    btnAdicionarPalavra.addEventListener("click", function name(event) {
+    btnAdicionarPalavra.addEventListener("click", event => {
         event.preventDefault();
 
         // recebendo o que eu quero esconder
-        var telaInicial = document.querySelector(".tela-inicial");
-        telaInicial.classList.add("d-none");
+        mostraTela(".tela-adicionar-palavra");
+        salvarPalavra();
+    })
+}
 
-        var adicionarPalavra = document.querySelector(".adicionando-palavra");
-        adicionarPalavra.classList.remove("d-none");
+function salvarPalavra() {
+    const btnSalvarPalavra = document.querySelector(".salvar-palavra");
+
+    btnSalvarPalavra.addEventListener("click", event => {
+        event.preventDefault();
+        const novaPalavra = document.getElementById("palavra").value;
+
+        if (novaPalavra != "") {
+            bancoDePalavras.push(novaPalavra.toUpperCase());
+            //POP UP DE AVISO
+
+            mostraTela(".jogo");
+
+            start();
+
+        } else {
+            //POP UP DE AVISO
+        }
     })
 }

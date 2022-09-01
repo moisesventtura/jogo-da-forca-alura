@@ -41,6 +41,26 @@
     pointer-events: none;
 }
 
+.forca-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: transparent;
+    stroke: #0A3871;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    margin: auto; */
+
+    fill: transparent;
+    stroke: #0A3871;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.forca-parte {
+    display: none;
+}
+
 .letras-certas {
     display: flex;
     flex-direction: row;
@@ -65,6 +85,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    margin-top: 20px;
 }
 
 .letras-certas li::after {
@@ -75,6 +96,7 @@
     border-radius: 8px;
     position: absolute;
     bottom: 0;
+
 }
 
 .letras-erradas {

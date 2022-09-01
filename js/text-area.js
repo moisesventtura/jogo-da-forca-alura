@@ -1,4 +1,4 @@
-let textArea = document.querySelector("#palavra-principal");
+let textArea = document.querySelector("#palavra");
 textArea.addEventListener('input', autoResize, false);
 
 function autoResize() {

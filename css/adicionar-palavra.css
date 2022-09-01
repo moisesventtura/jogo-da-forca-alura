@@ -19,20 +19,32 @@
 }
 
 /* Propriedade da Tela de Adicionar Palavra */
+.tela-adicionar-palavra {
+    width: 100%;
+    height: 100%;
+}
+
+.area {
+    width: 60%;
+    margin-top: 300px;
+}
+
+
 form {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     padding: 24px;
 
 }
 
 form textarea {
-    width: 100%;
+    width: 60%;
+    margin-top: 150px;
     border: none;
     font-family: "Inter";
     outline: none;
@@ -59,7 +71,7 @@ form textarea::placeholder {
     margin-bottom: -4px;
 }
 
-button.salvar-jogo {
+button.salvar-palavra {
     width: 332px;
     height: 67px;
     background-color: var(--dark-blue-300);

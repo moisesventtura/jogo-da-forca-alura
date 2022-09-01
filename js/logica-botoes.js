@@ -6,10 +6,21 @@ btnDesistir.addEventListener("click", function () {
 
 });
 
-var btnDesistir = document.querySelector("#new-game");
+function novoJogo() {
+    var btnNovoJogo = document.querySelector("#new-game");
 
-btnDesistir.addEventListener("click", function () {
+    btnNovoJogo.addEventListener("click", function () {
 
-    location.reload();
+        document.querySelector(".letras-certas").innerHTML = "";
+        document.querySelector(".letras-erradas").innerHTML = "";
 
-});
+        document.querySelectorAll(".forca-parte").forEach(parteForca => {
+            parteForca.style.display = "none";
+        });
+
+        start();
+    });
+
+}
+
+novoJogo();

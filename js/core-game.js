@@ -27,13 +27,13 @@ function palpite(palavra, letra) {
 
 //checa se o usuario excedeu a quantidade de palpites
 function checarEnforcado() {
-    return qtdErro > 9;
+    return qtdErro >= 9;
 }
 
 
 let qtdErro = 0;
 const MAX_ERROS = 9;
-const letrasErradas = [];
+let letrasErradas = [];
 
 /**
  * 
@@ -69,4 +69,11 @@ function trataAcerto(letraCorreta, palavra) {
     } else {
         return false;
     }
+}
+
+function resetGame() {
+    letrasCorretas = [];
+    letrasErradas = [];
+    qtdErro = 0;
+
 }
