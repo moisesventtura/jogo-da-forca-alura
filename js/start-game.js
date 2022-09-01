@@ -1,3 +1,5 @@
+let bancoDePalavras = ['FORCA', 'PALAVRA', 'JOGO', 'ALURA', 'ORACLE'];
+
 function startGame() {
     var btnIniciarJogo = document.querySelector(".start-game");
 
@@ -11,9 +13,6 @@ function startGame() {
     })
 }
 
-let bancoDePalavras = ['FORCA', 'PALAVRA', 'JOGO', 'ALURA', 'ORACLE'];
-
-
 function validaTecla(tecla) {
     const letraMaiuscula = /[A-Z]/.test(tecla) && tecla.length === 1;
     if (!letraMaiuscula) {
@@ -24,13 +23,13 @@ function validaTecla(tecla) {
 }
 
 function start() {
-    const palavra = sortearPalavra(bancoDePalavras);
-
+    const palavraSecreta = sortearPalavra(bancoDePalavras);
+    console.log(palavraSecreta);
     // alert(`Tamanho da Palavra: ${palavra.length}`)
 
     resetGame();
 
-    Array.from(palavra).forEach(letra => {
+    Array.from(palavraSecreta).forEach(letra => {
         const li = document.createElement("li");
         document.querySelector(".letras-certas").appendChild(li);
     })
@@ -38,7 +37,7 @@ function start() {
     window.addEventListener('keyup', e => {
         if (validaTecla(e.key)) {
             const letra = e.key
-            const ocorrencias = palpite(palavra, letra);
+            const ocorrencias = palpite(palavraSecreta, letra);
 
             if (ocorrencias === false) {
                 const enforcado = trataErros(letra);
@@ -56,7 +55,7 @@ function start() {
 
                 }
             } else {
-                const ganhou = trataAcerto(letra, palavra);
+                const ganhou = trataAcerto(letra, palavraSecreta);
                 const itens = document.querySelectorAll(".letras-certas li");
                 ocorrencias.forEach(ocorrencia => {
                     itens[ocorrencia].innerText = letra;
@@ -84,3 +83,9 @@ function mostraTela(seletor) {
 
     alvo.classList.remove("d-none");
 }
+
+function novaPalavraSorteada() {
+
+}
+
+startGame();

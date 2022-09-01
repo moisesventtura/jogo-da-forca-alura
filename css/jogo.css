@@ -42,20 +42,12 @@
 }
 
 .forca-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
     fill: transparent;
     stroke: #0A3871;
-    stroke-width: 4px;
-    stroke-linecap: round;
-    margin: auto; */
-
-    fill: transparent;
-    stroke: #0A3871;
-    stroke-width: 4px;
     stroke-linecap: round;
 }
+
+
 
 .forca-parte {
     display: none;

@@ -1,15 +1,27 @@
-var btnDesistir = document.querySelector("#quit");
+function desistir() {
 
-btnDesistir.addEventListener("click", function () {
+    var btnDesistir = document.getElementById("quit");
 
-    location.reload();
+    btnDesistir.addEventListener("click", element => {
 
-});
+        mostraTela(".tela-inicial");
+    });
+}
+
+function cancelar() {
+    var btnCancelar = document.querySelector(".cancelar");
+
+    btnCancelar.addEventListener("click", element => {
+        console.log("fui clicado")
+
+        mostraTela(".tela-inicial");
+    });
+}
 
 function novoJogo() {
     var btnNovoJogo = document.querySelector("#new-game");
 
-    btnNovoJogo.addEventListener("click", function () {
+    btnNovoJogo.addEventListener("click", element => {
 
         document.querySelector(".letras-certas").innerHTML = "";
         document.querySelector(".letras-erradas").innerHTML = "";
@@ -18,9 +30,12 @@ function novoJogo() {
             parteForca.style.display = "none";
         });
 
+
         start();
     });
 
 }
 
 novoJogo();
+desistir();
+cancelar();

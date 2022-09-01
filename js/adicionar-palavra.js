@@ -21,8 +21,10 @@ function salvarPalavra() {
             bancoDePalavras.push(novaPalavra.toUpperCase());
             //POP UP DE AVISO
 
-            mostraTela(".jogo");
+            //Limpa o TextArea
+            document.getElementById("palavra").value = "";
 
+            mostraTela(".jogo");
             start();
 
         } else {
@@ -30,3 +32,5 @@ function salvarPalavra() {
         }
     })
 }
+
+adicionarPalavra();

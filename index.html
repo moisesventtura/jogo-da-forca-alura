@@ -29,13 +29,8 @@
         <div class="tela-inicial tela" id="inicial">
             <div class="botoes">
                 <div class="btns">
-                    <div class="play">
-                        <button class="start-game" id="iniciar" onclick="startGame()">Começar a Jogar</button>
-                        <!-- <div class="comecou">
-                        </div> -->
-                    </div>
-                    <button class="adicionar-palavra" id="add-word" onclick="adicionarPalavra()">Adicionar nova
-                        palavra</button>
+                    <button class="start-game" id="iniciar" type="button"">Começar a Jogar</button>
+                <button class=" adicionar-palavra" id="add-word" type="button">Adicionar nova palavra</button>
                 </div>
             </div>
         </div>
@@ -81,7 +76,6 @@
                             transform="matrix(-0.866025 0.5 0.5 0.866025 257.522 239.624)" fill="#0A3871"
                             class="forca-parte" />
                     </svg>
-
                 </div>
             </div>
             <div class="listas">
@@ -92,11 +86,11 @@
             </div>
             <div class="botoes">
                 <div class="play">
-                    <button class="novo-jogo" id="new-game">Novo Jogo</button>
+                    <button class="novo-jogo" id="new-game" type="button">Novo Jogo</button>
                     <!-- <div class=" comecou">
                     </div> -->
                 </div>
-                <button class="desistir" id="quit">Desistir</button>
+                <button class="desistir exit" id="quit" type="button">Desistir</button>
             </div>
         </div>
         <div class="tela-adicionar-palavra d-none tela">
@@ -104,17 +98,15 @@
                 <textarea id="palavra" type="text" placeholder="Digite uma palavra"></textarea>
                 <div class="area">
                     <div class="alerta">
-                        <img src="img/warning.svg" alt="Alerta">
+                        <img src="img/warning.svg" alt="alerta">
                         <span>Máx. de 8 letras</span>
                     </div>
                     <div class="botoes">
-                        <div class="play">
-                            <button class="salvar-palavra" id="save" type="button">Salvar e
-                                começar</button>
-                            <!-- <div class=" comecou">
-                            </div> -->
-                        </div>
-                        <button class="cancelar" id="quit" type="button">Cancelar</button>
+                        <!-- <div class="play"> -->
+                        <button class="salvar-palavra" id="save" type="button">Salvar e
+                            começar</button>
+
+                        <button class="cancelar exit" id="quit" type="button">Cancelar</button>
                     </div>
                 </div>
             </form>

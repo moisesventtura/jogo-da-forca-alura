@@ -75,5 +75,4 @@ function resetGame() {
     letrasCorretas = [];
     letrasErradas = [];
     qtdErro = 0;
-
 }
