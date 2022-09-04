@@ -8,17 +8,17 @@ function sortearPalavra(palavras) {
 
 
 //checa um palpite
-function palpite(palavra, letra) {
+function palpite(palavraSecreta, letra) {
     //letra não existe na palavra
-    if (palavra.indexOf(letra) === -1) {
+    if (palavraSecreta.indexOf(letra) === -1) {
         return false;
     }
 
     let ocorrencias = [];
     let index = 0;
     //qtd de vezes que a letra está presente na palavra
-    while (palavra.indexOf(letra, index) !== -1) {
-        const ocorrencia = palavra.indexOf(letra, index);
+    while (palavraSecreta.indexOf(letra, index) !== -1) {
+        const ocorrencia = palavraSecreta.indexOf(letra, index);
         index = ocorrencia + 1;
         ocorrencias.push(ocorrencia)
     }
@@ -27,7 +27,7 @@ function palpite(palavra, letra) {
 
 //checa se o usuario excedeu a quantidade de palpites
 function checarEnforcado() {
-    return qtdErro >= 9;
+    return qtdErro > 9;
 }
 
 
@@ -44,7 +44,7 @@ let letrasErradas = [];
 function trataErros(letraErrada) {
     qtdErro++;
     letrasErradas.push(letraErrada);
-    if (qtdErro >= MAX_ERROS) {
+    if (qtdErro > MAX_ERROS) {
         return true;
     } else {
         return false;
@@ -76,3 +76,4 @@ function resetGame() {
     letrasErradas = [];
     qtdErro = 0;
 }
+

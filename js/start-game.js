@@ -23,6 +23,8 @@ function validaTecla(tecla) {
 }
 
 function start() {
+    let mensagem = "";
+    const partesCorpo = document.querySelectorAll(".forca-parte");
     const palavraSecreta = sortearPalavra(bancoDePalavras);
     console.log(palavraSecreta);
     // alert(`Tamanho da Palavra: ${palavra.length}`)
@@ -43,16 +45,16 @@ function start() {
                 const enforcado = trataErros(letra);
 
                 // alert('Letra Errada PLAYBOY')
+
                 const li = document.createElement("li");
                 li.innerText = letra;
                 document.querySelector(".letras-erradas").appendChild(li);
 
                 //desenhando a Forca
-                desenharForca();
-
-                if (enforcado) {
-                    alert('PERDEU PLAYBOY')
-
+                if (letrasErradas.length === partesCorpo.length) {
+                    mostraMensagem();
+                } else {
+                    desenharForca();
                 }
             } else {
                 const ganhou = trataAcerto(letra, palavraSecreta);
@@ -61,11 +63,18 @@ function start() {
                     itens[ocorrencia].innerText = letra;
                 })
                 if (ganhou) {
-                    alert('GANHOU RAPÁ');
-                } else {
-                    // alert(`Acertou, mizeravi, indices: ${ocorrencias}`);
-
+                    mostraMensagem(ganhou);
                 }
+            }
+
+            function mostraMensagem(status) {
+                if (status) {
+                    mensagem = "Parabéns! Você ganhou!";
+                } else {
+                    mensagem = "Você perdeu!";
+                }
+                document.querySelector("#mensagem").innerHTML = mensagem;
+                document.querySelector(".popup-container").style.display = "flex";
             }
             console.log(letrasCorretas, letrasErradas);
         }
@@ -82,10 +91,6 @@ function mostraTela(seletor) {
     });
 
     alvo.classList.remove("d-none");
-}
-
-function novaPalavraSorteada() {
-
 }
 
 startGame();

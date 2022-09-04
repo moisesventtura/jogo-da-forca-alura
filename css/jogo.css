@@ -127,3 +127,25 @@ button.desistir {
     background-color: #D8DFE8;
     color: var(--dark-blue-300);
 }
+
+.popup-container {
+    position: absolute;
+    width: 100%;
+    margin-top: 350px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    color: red;
+    font: bold;
+    font-size: larger;
+    padding: 20px;
+    text-align: center;
+}

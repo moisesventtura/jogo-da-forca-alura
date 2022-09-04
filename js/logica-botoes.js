@@ -23,13 +23,15 @@ function novoJogo() {
 
     btnNovoJogo.addEventListener("click", element => {
 
+        document.querySelector("#mensagem").innerHTML = "";
+        document.querySelector(".popup").innerHTML = "";
+
         document.querySelector(".letras-certas").innerHTML = "";
         document.querySelector(".letras-erradas").innerHTML = "";
 
         document.querySelectorAll(".forca-parte").forEach(parteForca => {
             parteForca.style.display = "none";
         });
-
 
         start();
     });
