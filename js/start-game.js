@@ -48,10 +48,10 @@ function start() {
                 document.querySelector(".letras-erradas").appendChild(li);
 
                 //desenhando a Forca
-                if (letrasErradas.length === partesCorpo.length) {
+                desenharForca();
+
+                if (enforcado) {
                     mostraMensagem();
-                } else {
-                    desenharForca();
                 }
             } else {
                 const ganhou = trataAcerto(letra, palavraSecreta);

@@ -42,7 +42,7 @@ let letrasErradas = [];
 function trataErros(letraErrada) {
     qtdErro++;
     letrasErradas.push(letraErrada);
-    if (qtdErro > MAX_ERROS) {
+    if (qtdErro >= MAX_ERROS) {
         return true;
     } else {
         return false;

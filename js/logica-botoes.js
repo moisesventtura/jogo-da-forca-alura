@@ -4,7 +4,7 @@ function desistir() {
 
     btnDesistir.addEventListener("click", element => {
 
-        mostraTela(".tela-inicial");
+        window.location.reload();
     });
 }
 
