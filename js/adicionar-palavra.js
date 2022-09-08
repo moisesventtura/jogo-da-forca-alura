@@ -19,7 +19,7 @@ function salvarPalavra() {
 
         if (novaPalavra != "") {
             bancoDePalavras.push(novaPalavra.toUpperCase());
-            //POP UP DE AVISO
+            alert("Palavra adicionada!")
 
             //Limpa o TextArea
             document.getElementById("palavra").value = "";
@@ -28,7 +28,7 @@ function salvarPalavra() {
             start();
 
         } else {
-            //POP UP DE AVISO
+            alert("Digite uma palavra!")
         }
     })
 }

@@ -27,7 +27,6 @@ function start() {
     const partesCorpo = document.querySelectorAll(".forca-parte");
     const palavraSecreta = sortearPalavra(bancoDePalavras);
     console.log(palavraSecreta);
-    // alert(`Tamanho da Palavra: ${palavra.length}`)
 
     resetGame();
 
@@ -43,8 +42,6 @@ function start() {
 
             if (ocorrencias === false) {
                 const enforcado = trataErros(letra);
-
-                // alert('Letra Errada PLAYBOY')
 
                 const li = document.createElement("li");
                 li.innerText = letra;

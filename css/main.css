@@ -66,7 +66,7 @@ header {
     gap: 20px
 }
 
-.btns {
+.start-buttons {
     display: flex;
     justify-content: center;
     flex-direction: column;

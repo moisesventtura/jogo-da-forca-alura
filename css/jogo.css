@@ -29,13 +29,6 @@
     padding: 24px;
 }
 
-/* .jogo img {
-    width: 294px;
-    height: 5px;
-    left: 573px;
-    top: 443px;
-} */
-
 .d-none {
     display: none;
     pointer-events: none;
@@ -143,9 +136,11 @@ button.desistir {
 }
 
 .popup {
+    font-family: 'Inter';
+    font-style: normal;
     color: red;
     font: bold;
-    font-size: larger;
+    font-size: 30px;
     padding: 20px;
     text-align: center;
 }
