@@ -8,7 +8,17 @@ Resultado do segundo desafio do programa ONE, da Oracle em parceria com a Alura:
 
 <p align="center">
       <h1>Tela Incial</h1>
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/53119511/182502484-45f07927-fa85-4b5a-b42a-6e9164b75d25.JPG">
+     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/53119511/189251328-23d8f94f-ed7b-4141-86f4-ced2b9521e4c.JPG">
+</p>
+
+<p align="center">
+      <h1>Jogo Rodando</h1>
+     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/53119511/189251471-229b3bef-93cb-4e14-9d87-df22315cbdf2.JPG">
+</p>
+
+<p align="center">
+      <h1>Tela de Adicionar Palavra</h1>
+     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/53119511/189251506-96e7d3e1-6c67-4612-b352-23b4b43f6d36.JPG">
 </p>
 
 Requisitos:
@@ -29,7 +39,7 @@ Extra
 
 GitHub Pages
 
---> https://moisesventtura.github.io/decodificador-alura/
+-->
 
 Badge pela Conclusão do Desafio
 ---
