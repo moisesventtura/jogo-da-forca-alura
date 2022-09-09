@@ -39,8 +39,8 @@ Extra
 
 GitHub Pages
 
--->
+--> https://moisesventtura.github.io/jogo-da-forca-alura/
 
 Badge pela Conclusão do Desafio
 ---
-(AGUARDANDO)
+<img width="400" heigth="400" src="https://user-images.githubusercontent.com/53119511/189252544-6f2c30e2-56a5-4c54-9013-1397ad5b7bdb.png">
