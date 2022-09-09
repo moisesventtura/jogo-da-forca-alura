@@ -12,9 +12,7 @@ function cancelar() {
     var btnCancelar = document.querySelector(".cancelar");
 
     btnCancelar.addEventListener("click", element => {
-        console.log("fui clicado")
-
-        mostraTela(".tela-inicial");
+        window.location.reload();
     });
 }
 
@@ -23,17 +21,11 @@ function novoJogo() {
 
     btnNovoJogo.addEventListener("click", element => {
 
-        document.querySelector("#mensagem").innerHTML = "";
-        document.querySelector(".popup").innerHTML = "";
+        var btnNovoJogo = document.querySelector("#new-game");
 
-        document.querySelector(".letras-certas").innerHTML = "";
-        document.querySelector(".letras-erradas").innerHTML = "";
-
-        document.querySelectorAll(".forca-parte").forEach(parteForca => {
-            parteForca.style.display = "none";
+        btnNovoJogo.addEventListener("click", e => {
+            location.replace("/?page=new-game")
         });
-
-        start();
     });
 
 }

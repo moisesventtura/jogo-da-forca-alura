@@ -10,6 +10,10 @@ function adicionarPalavra() {
     })
 }
 
+function isLetra(codigo) {
+    return codigo >= 65 && codigo <= 90;
+}
+
 function salvarPalavra() {
     const btnSalvarPalavra = document.querySelector(".salvar-palavra");
 
@@ -17,7 +21,9 @@ function salvarPalavra() {
         event.preventDefault();
         const novaPalavra = document.getElementById("palavra").value;
 
-        if (novaPalavra != "") {
+        const codigo = event.keyCode;
+
+        if (novaPalavra != "" && isLetra(codigo)) {
             bancoDePalavras.push(novaPalavra.toUpperCase());
             alert("Palavra adicionada!")
 

@@ -1,5 +1,19 @@
 let bancoDePalavras = ['FORCA', 'PALAVRA', 'JOGO', 'ALURA', 'ORACLE'];
 
+function handlePage() {
+    const searchParams = new URLSearchParams(window.location.search);
+    const page = searchParams.get('page')
+
+    if (page === 'new-game') {
+        // recebendo o que eu quero esconder
+        mostraTela(".jogo");
+
+        start();
+    }
+}
+
+handlePage()
+
 function startGame() {
     var btnIniciarJogo = document.querySelector(".start-game");
 
@@ -16,6 +30,7 @@ function startGame() {
 function validaTecla(tecla) {
     const letraMaiuscula = /[A-Z]/.test(tecla) && tecla.length === 1;
     if (!letraMaiuscula) {
+        alert("LIGUE O CAPSLOCK!")
         return false;
     }
     const jaFoiInserida = letrasCorretas.includes(tecla) || letrasErradas.includes(tecla);
@@ -24,7 +39,6 @@ function validaTecla(tecla) {
 
 function start() {
     let mensagem = "";
-    const partesCorpo = document.querySelectorAll(".forca-parte");
     const palavraSecreta = sortearPalavra(bancoDePalavras);
     console.log(palavraSecreta);
 
@@ -66,7 +80,7 @@ function start() {
 
             function mostraMensagem(status) {
                 if (status) {
-                    mensagem = "Parabéns! Você ganhou!";
+                    mensagem = "Você Venceu. Parabéns!";
                 } else {
                     mensagem = "Você perdeu!";
                 }
